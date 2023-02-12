@@ -1,0 +1,8 @@
+:root {
+    --separator: #9925be;
+}
+.separator {
+    width: 98.2%;
+    height: 30px;
+    background-color: var(--separator);
+}

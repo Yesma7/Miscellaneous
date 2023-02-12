@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="css/styles.css">
+
+        <!--Bootstrap 5-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    </head>
+    <body>
+        
+        <div class="text-center">
+            <h1 class="text-uppercase">Historia Clínica</h1>
+            <h2 class="text-uppercase fw-bold">Datos del Paciente</h2>
+        </div>
+
+        <form>
+            <div class="container">
+                <div class="row">
+                    <div class="row">
+                        <div class="col-sm-3 col-4">
+                            <div class="input-group input-group-sm mb3">
+                                <span class="input-group-text" id="inputGroup-sizing-sm">N°</span>
+                                <input type="text" class="form-control " aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+                            </div>
+                        </div>
+    
+                        <div class="w-100"></div>
+    
+                        <div class="col-sm-3 col-4">
+                            <div class="input-group input-group-sm mb3">
+                                <span class="input-group-text" id="inputGroup-sizing-sm">Fecha</span>
+                                <input type="text" class="form-control " aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+                            </div>
+                        </div>
+                </div>
+    
+    
+                <div class="row mt-2">
+                    <div class="col">
+                        <div class="input-group input-group-sm mb3">
+                            <span class="input-group-text" id="inputGroup-sizing-sm">Nombres</span>
+                            <input type="text" class="form-control " aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+                        </div>
+                    </div>
+    
+                    <div class="col">
+                        <div class="input-group input-group-sm mb3">
+                            <span class="input-group-text" id="inputGroup-sizing-sm">Apellidos</span>
+                            <input type="text" class="form-control " aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+                        </div>
+                    </div>
+                </div>
+    
+    
+                <div class="row mt-2">
+                    <div class="col">
+                        <div class="input-group input-group-sm mb3">
+                            <span class="input-group-text" id="inputGroup-sizing-sm">Fecha de Nacimiento</span>
+                            <input type="date" class="form-control " aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+                        </div>
+                    </div>
+    
+                    <div class="col">
+                        <div class="input-group input-group-sm mb3">
+                            <span class="input-group-text" id="inputGroup-sizing-sm">Estado Civil</span>
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected>Selecciona 1 por favor</option>
+                                <option value="1">Solter@</option>
+                                <option value="2">Casad@</option>
+                                <option value="3">Divorciad@</option>
+                                <option value="3">Viud@</option>
+                                <option value="3">Prefiere no decirlo</option>
+                              </select>
+                        </div>
+                    </div>
+    
+                    <div class="col">
+                        <div class="input-group input-group-sm mb3">
+                            <span class="input-group-text" id="inputGroup-sizing-sm">Edad</span>
+                            <input type="text" class="form-control " aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+                        </div>
+                    </div>
+                    
+                    <div class="col">
+                        <div class="input-group input-group-sm mb3">
+                            <span class="input-group-text" id="inputGroup-sizing-sm">Sexo</span>
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected>Selecciona 1 por favor</option>
+                                <option value="1">Másculino</option>
+                                <option value="2">Femenino</option>
+                                <option value="3">LGTB+</option>
+                                <option value="3">Prefiere no decirlo</option>
+                              </select>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="row mt-2">
+                    <div class="col">
+                        <div class="input-group input-group-sm mb3">
+                            <span class="input-group-text" id="inputGroup-sizing-sm">Eps</span>
+                            <select class="form-select" id="eps" aria-label="Default select example">
+                                <option selected>Selecciona 1 por favor</option>
+                              </select>
+                        </div>
+                    </div>
+    
+                    <div class="col">
+                        <div class="input-group input-group-sm mb3">
+                            <span class="input-group-text" id="inputGroup-sizing-sm">Profesión</span>
+                            <input type="text" class="form-control " aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+                        </div>
+                    </div>
+    
+                    <div class="col">
+                        <div class="input-group input-group-sm mb3">
+                            <span class="input-group-text" id="inputGroup-sizing-sm">Domicilio</span>
+                            <input type="text" class="form-control " aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="row mt-2">
+                    <div class="col">
+                        <div class="input-group input-group-sm mb3">
+                            <span class="input-group-text" id="inputGroup-sizing-sm">Teléfono Móvil</span>
+                            <input type="text" class="form-control " aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+                        </div>
+                    </div>
+    
+                    <div class="col">
+                        <div class="input-group input-group-sm mb3">
+                            <span class="input-group-text" id="inputGroup-sizing-sm">Teléfono Fijo</span>
+                            <input type="text" class="form-control " aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+                        </div>
+                    </div>
+    
+                    <div class="col">
+                        <div class="input-group input-group-sm mb3">
+                            <span class="input-group-text" id="inputGroup-sizing-sm">Barrio</span>
+                            <input type="text" class="form-control " aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+                        </div>
+                    </div>
+                </div>
+                </div>
+                <!--.row Sección 1-->
+
+                <div class="separator"></div>
+
+                <div class="row">
+                    <div class="row">
+                        <div class="col text-center">
+                            <h5>DATOS DEL REPRESENTANTE LEGAL, TUTOR O CURADOR ( en caso de ser necesario)</h5>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <div class="input-group input-group-sm mb3">
+                                <span class="input-group-text" id="inputGroup-sizing-sm">Nombres</span>
+                                <input type="text" class="form-control " aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="input-group input-group-sm mb3">
+                                <span class="input-group-text" id="inputGroup-sizing-sm">Apellidos</span>
+                                <input type="text" class="form-control " aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mt-2">
+                        <div class="col">
+                            <div class="input-group input-group-sm mb3">
+                                <span class="input-group-text" id="inputGroup-sizing-sm">Parentesco</span>
+                                <input type="text" class="form-control " aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+                            </div>
+                        </div>
+
+                    <div class="col">
+                        <div class="input-group input-group-sm mb3">
+                            <span class="input-group-text" id="inputGroup-sizing-sm">Teléfonos</span>
+                            <input type="text" class="form-control " aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+                        </div>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="separator"></div>
+
+                <div class="row">
+                    <div class="row">
+                        <div class="col text-center">
+                            <h5>CONTACTOS DE EMERGENCIA (minimo 3)</h5>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <div class="input-group input-group-sm mb3">
+                                <span class="input-group-text" id="inputGroup-sizing-sm">Nombres</span>
+                                <input type="text" class="form-control " aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="input-group input-group-sm mb3">
+                                <span class="input-group-text" id="inputGroup-sizing-sm">Teléfono</span>
+                                <input type="text" class="form-control " aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mt-2">
+                        <div class="col">
+                            <div class="input-group input-group-sm mb3">
+                                <span class="input-group-text" id="inputGroup-sizing-sm">Nombres</span>
+                                <input type="text" class="form-control " aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="input-group input-group-sm mb3">
+                                <span class="input-group-text" id="inputGroup-sizing-sm">Teléfono</span>
+                                <input type="text" class="form-control " aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mt-2">
+                        <div class="col">
+                            <div class="input-group input-group-sm mb3">
+                                <span class="input-group-text" id="inputGroup-sizing-sm">Nombres</span>
+                                <input type="text" class="form-control " aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="input-group input-group-sm mb3">
+                                <span class="input-group-text" id="inputGroup-sizing-sm">Teléfono</span>
+                                <input type="text" class="form-control " aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="separator"></div>
+
+                <div class="row">
+                    <div class="row">
+                        <div class="col text-center">
+                            <h5>MOTIVO DE CONSULTA</h5>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="input-group">
+                            <span class="input-group-text">Motivo de Consulta</span>
+                            <textarea class="form-control" aria-label="With textarea" rows="10"></textarea>
+                          </div>
+                    </div>
+
+                    <div class="row mt-4">
+                        <div class="col">
+                            <div class="input-group">
+                                <span class="input-group-text">Antecedentes Personales</span>
+                                <textarea class="form-control" aria-label="With textarea" rows="10"></textarea>
+                              </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="input-group">
+                                <span class="input-group-text">Antecedentes Familiares</span>
+                                <textarea class="form-control" aria-label="With textarea" rows="10"></textarea>
+                              </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="separator"></div>
+
+                <div class="row">
+                    <div class="row">
+                        <div class="col text-center">
+                            <h5>ACLARACIÓN</h5>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <p>¿Ha tenido un proceso anterior? <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                id="flexRadioDefault1">
+                            <label class="form-check-label" for="flexRadioDefault1">
+                                Sí
+                            </label> <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                            <label class="form-check-label" for="flexRadioDefault1">
+                                No
+                            </label> ¿en caso de ser que si, manifiesta libre y
+                            voluntariamente, por medio de la firma que el proceso terapéutico se dio por terminado? <input type="text"
+                                class="form-control " aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm"> De esta
+                            manera el psicólogo se libera de responsabilidades disciplinarias.
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="separator"></div>
+
+                <div class="row">
+                    <div class="row">
+                        <div class="col text-center">
+                            <h5>IDENTIFICACIÓN DE DESENCADENANTE (MOTIVO DE CONSULTA)</h5>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="input-group">
+                            <span class="input-group-text">Desencadenante</span>
+                            <textarea class="form-control" aria-label="With textarea" rows="10"></textarea>
+                          </div>
+                    </div>
+                </div>
+
+                <div class="separator"></div>
+
+                <div class="row">
+                    <div class="row">
+                        <div class="col text-center">
+                            <h5>IMPRESIÓN DIAGNÓSTICA</h5>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="input-group">
+                            <span class="input-group-text">Impresión Diagnóstica</span>
+                            <textarea class="form-control" aria-label="With textarea" rows="10"></textarea>
+                          </div>
+                    </div>
+                </div>
+
+                <div class="separator"></div>
+
+                <div class="row">
+                    <div class="row">
+                        <div class="col text-center">
+                            <h5>EXÁMEN MENTAL</h5>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="input-group">
+                            <span class="input-group-text">Exámen Mental</span>
+                            <textarea class="form-control" aria-label="With textarea" rows="10"></textarea>
+                          </div>
+                    </div>
+                </div>
+
+                <div class="separator"></div>
+
+                <div class="row">
+                    <div class="row">
+                        <div class="col text-center">
+                            <h5>ENFOQUE Y MODELO TERAPÉUTICO</h5>
+                        </div>
+                    </div>
+    
+                    <div class="row">
+                        <div class="col">
+                            <div class="input-group">
+                                <span class="input-group-text">Enfoque</span>
+                                <textarea class="form-control" aria-label="With textarea"></textarea>
+                              </div>
+                        </div>
+    
+                        <div class="col">
+                            <div class="input-group">
+                                <span class="input-group-text">Modelo</span>
+                                <textarea class="form-control" aria-label="With textarea"></textarea>
+                              </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="separator"></div>
+
+                <div class="row">
+                    <div class="row">
+                        <div class="col text-center">
+                            <h5>OBSERVACIONES (si las hay)</h5>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="input-group">
+                            <span class="input-group-text">Observaciones</span>
+                            <textarea class="form-control" aria-label="With textarea" rows="5"></textarea>
+                          </div>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary mt-4">Guardar Historia</button>
+
+            </div>
+
+
+
+
+
+
+
+
+
+        </form>
+
+
+        <!--Bootstrap 5-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+
+        <!--Eps Json-->
+        <script src="js/dataForm.js"></script>
+    </body>
+</html>
