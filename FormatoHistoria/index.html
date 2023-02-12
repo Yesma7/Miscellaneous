@@ -24,14 +24,14 @@
             <h2 class="text-uppercase fw-bold">Datos del Paciente</h2>
         </div>
 
-        <form>
+        <form name="historiaClinica" id="historiaClinica" method="post">
             <div class="container">
-                <div class="row">
+                <div class="row shadow p-3 mb-3 bg-body rounded">
                     <div class="row">
                         <div class="col-sm-3 col-4">
                             <div class="input-group input-group-sm mb3">
                                 <span class="input-group-text" id="inputGroup-sizing-sm">N°</span>
-                                <input type="text" class="form-control " aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+                                <input type="text" id="historiaNumero" name="historiaNumero" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" value="id.paciente|contador"></input>
                             </div>
                         </div>
     
@@ -40,7 +40,16 @@
                         <div class="col-sm-3 col-4">
                             <div class="input-group input-group-sm mb3">
                                 <span class="input-group-text" id="inputGroup-sizing-sm">Fecha</span>
-                                <input type="text" class="form-control " aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+                                <input type="text" id="historiaFecha" name="historiaFecha" class="form-control " aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" value="FechaDigitación"></input>
+                            </div>
+                        </div>
+
+                        <div class="w-100"></div>
+
+                        <div class="col-sm-3 col-4">
+                            <div class="input-group input-group-sm mb3">
+                                <span class="input-group-text" id="inputGroup-sizing-sm">Profesional</span>
+                                <input type="text" id="historiaProfesional" name="historiaProfesional" class="form-control " aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
                             </div>
                         </div>
                 </div>
@@ -50,14 +59,14 @@
                     <div class="col">
                         <div class="input-group input-group-sm mb3">
                             <span class="input-group-text" id="inputGroup-sizing-sm">Nombres</span>
-                            <input type="text" class="form-control " aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+                            <input type="text" id="pacienteNombre" name="pacienteNombre" class="form-control " aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
                         </div>
                     </div>
     
                     <div class="col">
                         <div class="input-group input-group-sm mb3">
                             <span class="input-group-text" id="inputGroup-sizing-sm">Apellidos</span>
-                            <input type="text" class="form-control " aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+                            <input type="text" id="pacienteApellido" name="pacienteApellido" class="form-control " aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
                         </div>
                     </div>
                 </div>
@@ -67,20 +76,20 @@
                     <div class="col">
                         <div class="input-group input-group-sm mb3">
                             <span class="input-group-text" id="inputGroup-sizing-sm">Fecha de Nacimiento</span>
-                            <input type="date" class="form-control " aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+                            <input type="date" id="pacienteDob" name="pacienteDob" class="form-control " aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
                         </div>
                     </div>
     
                     <div class="col">
                         <div class="input-group input-group-sm mb3">
                             <span class="input-group-text" id="inputGroup-sizing-sm">Estado Civil</span>
-                            <select class="form-select" aria-label="Default select example">
+                            <select class="form-select" id="pacienteEstado" name="pacienteEstado" aria-label="Default select example">
                                 <option selected>Selecciona 1 por favor</option>
-                                <option value="1">Solter@</option>
-                                <option value="2">Casad@</option>
-                                <option value="3">Divorciad@</option>
-                                <option value="3">Viud@</option>
-                                <option value="3">Prefiere no decirlo</option>
+                                <option value="Solter@">Solter@</option>
+                                <option value="Casad@">Casad@</option>
+                                <option value="Divorciad@">Divorciad@</option>
+                                <option value="Viud@">Viud@</option>
+                                <option value="Prefiere no decirlo">Prefiere no decirlo</option>
                               </select>
                         </div>
                     </div>
@@ -88,19 +97,19 @@
                     <div class="col">
                         <div class="input-group input-group-sm mb3">
                             <span class="input-group-text" id="inputGroup-sizing-sm">Edad</span>
-                            <input type="text" class="form-control " aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+                            <input type="text" id="pacienteEdad" name="pacienteEdad" class="form-control " aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
                         </div>
                     </div>
                     
                     <div class="col">
                         <div class="input-group input-group-sm mb3">
                             <span class="input-group-text" id="inputGroup-sizing-sm">Sexo</span>
-                            <select class="form-select" aria-label="Default select example">
+                            <select class="form-select" id="pacienteSexo" name="pacienteSexo" aria-label="Default select example">
                                 <option selected>Selecciona 1 por favor</option>
-                                <option value="1">Másculino</option>
-                                <option value="2">Femenino</option>
-                                <option value="3">LGTB+</option>
-                                <option value="3">Prefiere no decirlo</option>
+                                <option value="Másculino">Másculino</option>
+                                <option value="Femenino">Femenino</option>
+                                <option value="LGTB+">LGTB+</option>
+                                <option value="Prefiere no decirlo">Prefiere no decirlo</option>
                               </select>
                         </div>
                     </div>
@@ -110,7 +119,7 @@
                     <div class="col">
                         <div class="input-group input-group-sm mb3">
                             <span class="input-group-text" id="inputGroup-sizing-sm">Eps</span>
-                            <select class="form-select" id="eps" aria-label="Default select example">
+                            <select class="form-select" name="pacienteEps" id="pacienteEps" aria-label="Default select example">
                                 <option selected>Selecciona 1 por favor</option>
                               </select>
                         </div>
@@ -119,14 +128,14 @@
                     <div class="col">
                         <div class="input-group input-group-sm mb3">
                             <span class="input-group-text" id="inputGroup-sizing-sm">Profesión</span>
-                            <input type="text" class="form-control " aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+                            <input type="text" id="pacienteProfesion" name="pacienteProfesion" class="form-control " aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
                         </div>
                     </div>
     
                     <div class="col">
                         <div class="input-group input-group-sm mb3">
                             <span class="input-group-text" id="inputGroup-sizing-sm">Domicilio</span>
-                            <input type="text" class="form-control " aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+                            <input type="text" id="pacienteDomicilio" name="pacienteDomicilio" class="form-control " aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
                         </div>
                     </div>
                 </div>
@@ -135,30 +144,30 @@
                     <div class="col">
                         <div class="input-group input-group-sm mb3">
                             <span class="input-group-text" id="inputGroup-sizing-sm">Teléfono Móvil</span>
-                            <input type="text" class="form-control " aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+                            <input type="text" id="pacienteTelmovil" name="pacienteTelmovil" class="form-control " aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
                         </div>
                     </div>
     
                     <div class="col">
                         <div class="input-group input-group-sm mb3">
                             <span class="input-group-text" id="inputGroup-sizing-sm">Teléfono Fijo</span>
-                            <input type="text" class="form-control " aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+                            <input type="text" id="pacienteTelfijo" name="pacienteTelfijo" class="form-control " aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
                         </div>
                     </div>
     
                     <div class="col">
                         <div class="input-group input-group-sm mb3">
                             <span class="input-group-text" id="inputGroup-sizing-sm">Barrio</span>
-                            <input type="text" class="form-control " aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+                            <input type="text" id="pacienteBarrio" name="pacienteBarrio" class="form-control " aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
                         </div>
                     </div>
                 </div>
                 </div>
                 <!--.row Sección 1-->
 
-                <div class="separator"></div>
+                <div class="separator mt-3 shadow p-3 mb-3 rounded"></div>
 
-                <div class="row">
+                <div class="row shadow p-3 mb-3 bg-body rounded">
                     <div class="row">
                         <div class="col text-center">
                             <h5>DATOS DEL REPRESENTANTE LEGAL, TUTOR O CURADOR ( en caso de ser necesario)</h5>
@@ -169,14 +178,14 @@
                         <div class="col">
                             <div class="input-group input-group-sm mb3">
                                 <span class="input-group-text" id="inputGroup-sizing-sm">Nombres</span>
-                                <input type="text" class="form-control " aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+                                <input type="text" id="tutorNombre" name="tutorNombre" class="form-control " aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
                             </div>
                         </div>
 
                         <div class="col">
                             <div class="input-group input-group-sm mb3">
                                 <span class="input-group-text" id="inputGroup-sizing-sm">Apellidos</span>
-                                <input type="text" class="form-control " aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+                                <input type="text" id="tutorApellido" name="tutorApellido" class="form-control " aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
                             </div>
                         </div>
                     </div>
@@ -185,22 +194,22 @@
                         <div class="col">
                             <div class="input-group input-group-sm mb3">
                                 <span class="input-group-text" id="inputGroup-sizing-sm">Parentesco</span>
-                                <input type="text" class="form-control " aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+                                <input type="text" id="tutorParentesco" name="tutorParentesco" class="form-control " aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
                             </div>
                         </div>
 
                     <div class="col">
                         <div class="input-group input-group-sm mb3">
                             <span class="input-group-text" id="inputGroup-sizing-sm">Teléfonos</span>
-                            <input type="text" class="form-control " aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+                            <input type="text" id="tutorTelefono" name="tutorTelefono" class="form-control " aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
                         </div>
                     </div>
                     </div>
                 </div>
 
-                <div class="separator"></div>
+                <div class="separator mt-3 shadow p-3 mb-3 rounded"></div>
 
-                <div class="row">
+                <div class="row shadow p-3 mb-3 bg-body rounded">
                     <div class="row">
                         <div class="col text-center">
                             <h5>CONTACTOS DE EMERGENCIA (minimo 3)</h5>
@@ -211,14 +220,14 @@
                         <div class="col">
                             <div class="input-group input-group-sm mb3">
                                 <span class="input-group-text" id="inputGroup-sizing-sm">Nombres</span>
-                                <input type="text" class="form-control " aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+                                <input type="text" id="emergenciaNombre1" name="emergenciaNombre1" class="form-control " aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
                             </div>
                         </div>
 
                         <div class="col">
                             <div class="input-group input-group-sm mb3">
                                 <span class="input-group-text" id="inputGroup-sizing-sm">Teléfono</span>
-                                <input type="text" class="form-control " aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+                                <input type="text" id="emergenciaTelefono1" name="emergenciaTelefono1" class="form-control " aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
                             </div>
                         </div>
                     </div>
@@ -227,14 +236,14 @@
                         <div class="col">
                             <div class="input-group input-group-sm mb3">
                                 <span class="input-group-text" id="inputGroup-sizing-sm">Nombres</span>
-                                <input type="text" class="form-control " aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+                                <input type="text" id="emergenciaNombre2" name="emergenciaNombre2" class="form-control " aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
                             </div>
                         </div>
 
                         <div class="col">
                             <div class="input-group input-group-sm mb3">
                                 <span class="input-group-text" id="inputGroup-sizing-sm">Teléfono</span>
-                                <input type="text" class="form-control " aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+                                <input type="text" id="emergenciaTelefono2" name="emergenciaTelefono2" class="form-control " aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
                             </div>
                         </div>
                     </div>
@@ -243,22 +252,22 @@
                         <div class="col">
                             <div class="input-group input-group-sm mb3">
                                 <span class="input-group-text" id="inputGroup-sizing-sm">Nombres</span>
-                                <input type="text" class="form-control " aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+                                <input type="text" id="emergenciaNombre3" name="emergenciaNombre3" class="form-control " aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
                             </div>
                         </div>
 
                         <div class="col">
                             <div class="input-group input-group-sm mb3">
                                 <span class="input-group-text" id="inputGroup-sizing-sm">Teléfono</span>
-                                <input type="text" class="form-control " aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+                                <input type="text" id="emergenciaTelefono3" name="emergenciaTelefono3" class="form-control " aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="separator"></div>
+                <div class="separator mt-3 shadow p-3 mb-3 rounded"></div>
 
-                <div class="row">
+                <div class="row shadow p-3 mb-3 bg-body rounded">
                     <div class="row">
                         <div class="col text-center">
                             <h5>MOTIVO DE CONSULTA</h5>
@@ -268,7 +277,7 @@
                     <div class="row">
                         <div class="input-group">
                             <span class="input-group-text">Motivo de Consulta</span>
-                            <textarea class="form-control" aria-label="With textarea" rows="10"></textarea>
+                            <textarea class="form-control" id="motivoConsulta" name="motivoConsulta" aria-label="With textarea" rows="10"></textarea>
                           </div>
                     </div>
 
@@ -276,22 +285,22 @@
                         <div class="col">
                             <div class="input-group">
                                 <span class="input-group-text">Antecedentes Personales</span>
-                                <textarea class="form-control" aria-label="With textarea" rows="10"></textarea>
+                                <textarea class="form-control" id="antecedentesPersonales" name="antecedentesPersonales" aria-label="With textarea" rows="10"></textarea>
                               </div>
                         </div>
 
                         <div class="col">
                             <div class="input-group">
                                 <span class="input-group-text">Antecedentes Familiares</span>
-                                <textarea class="form-control" aria-label="With textarea" rows="10"></textarea>
+                                <textarea class="form-control" id="antecedentesFamiliares" name="antecedentesFamiliares" aria-label="With textarea" rows="10"></textarea>
                               </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="separator"></div>
+                <div class="separator mt-3 shadow p-3 mb-3 rounded"></div>
 
-                <div class="row">
+                <div class="row shadow p-3 mb-3 bg-body rounded">
                     <div class="row">
                         <div class="col text-center">
                             <h5>ACLARACIÓN</h5>
@@ -299,12 +308,12 @@
                     </div>
 
                     <div class="row">
-                        <p>¿Ha tenido un proceso anterior? <input class="form-check-input" type="radio" name="flexRadioDefault"
-                                id="flexRadioDefault1">
+                        <p>¿Ha tenido un proceso anterior? <input class="form-check-input" id="aclaracionSi" name="aclaracionSi"  type="radio" name="flexRadioDefault"
+                                id="flexRadioDefault1" value="Si">
                             <label class="form-check-label" for="flexRadioDefault1">
                                 Sí
-                            </label> <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                            <label class="form-check-label" for="flexRadioDefault1">
+                            </label> <input class="form-check-input" id="aclaracionNo" name="aclaracionNo" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                            <label class="form-check-label" for="flexRadioDefault1" value="No">
                                 No
                             </label> ¿en caso de ser que si, manifiesta libre y
                             voluntariamente, por medio de la firma que el proceso terapéutico se dio por terminado? <input type="text"
@@ -315,9 +324,9 @@
 
                 </div>
 
-                <div class="separator"></div>
+                <div class="separator mt-3 shadow p-3 mb-3 rounded"></div>
 
-                <div class="row">
+                <div class="row shadow p-3 mb-3 bg-body rounded">
                     <div class="row">
                         <div class="col text-center">
                             <h5>IDENTIFICACIÓN DE DESENCADENANTE (MOTIVO DE CONSULTA)</h5>
@@ -327,14 +336,14 @@
                     <div class="row">
                         <div class="input-group">
                             <span class="input-group-text">Desencadenante</span>
-                            <textarea class="form-control" aria-label="With textarea" rows="10"></textarea>
+                            <textarea class="form-control" id="desencadenante" name="desencadenante" aria-label="With textarea" rows="10"></textarea>
                           </div>
                     </div>
                 </div>
 
-                <div class="separator"></div>
+                <div class="separator mt-3 shadow p-3 mb-3 rounded"></div>
 
-                <div class="row">
+                <div class="row shadow p-3 mb-3 bg-body rounded">
                     <div class="row">
                         <div class="col text-center">
                             <h5>IMPRESIÓN DIAGNÓSTICA</h5>
@@ -344,14 +353,14 @@
                     <div class="row">
                         <div class="input-group">
                             <span class="input-group-text">Impresión Diagnóstica</span>
-                            <textarea class="form-control" aria-label="With textarea" rows="10"></textarea>
+                            <textarea class="form-control" id="impresionDiagnostica" name="impresionDiagnostica" aria-label="With textarea" rows="10"></textarea>
                           </div>
                     </div>
                 </div>
 
-                <div class="separator"></div>
+                <div class="separator mt-3 shadow p-3 mb-3 rounded"></div>
 
-                <div class="row">
+                <div class="row shadow p-3 mb-3 bg-body rounded">
                     <div class="row">
                         <div class="col text-center">
                             <h5>EXÁMEN MENTAL</h5>
@@ -361,14 +370,14 @@
                     <div class="row">
                         <div class="input-group">
                             <span class="input-group-text">Exámen Mental</span>
-                            <textarea class="form-control" aria-label="With textarea" rows="10"></textarea>
+                            <textarea class="form-control" id="examenMental" name="examenMental" aria-label="With textarea" rows="10"></textarea>
                           </div>
                     </div>
                 </div>
 
-                <div class="separator"></div>
+                <div class="separator mt-3 shadow p-3 mb-3 rounded"></div>
 
-                <div class="row">
+                <div class="row shadow p-3 mb-3 bg-body rounded">
                     <div class="row">
                         <div class="col text-center">
                             <h5>ENFOQUE Y MODELO TERAPÉUTICO</h5>
@@ -379,22 +388,22 @@
                         <div class="col">
                             <div class="input-group">
                                 <span class="input-group-text">Enfoque</span>
-                                <textarea class="form-control" aria-label="With textarea"></textarea>
+                                <textarea class="form-control" id="enfoque" name="enfoque" aria-label="With textarea"></textarea>
                               </div>
                         </div>
     
                         <div class="col">
                             <div class="input-group">
                                 <span class="input-group-text">Modelo</span>
-                                <textarea class="form-control" aria-label="With textarea"></textarea>
+                                <textarea class="form-control" id="modelo" name="modelo" aria-label="With textarea"></textarea>
                               </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="separator"></div>
+                <div class="separator mt-3 shadow p-3 mb-3 rounded"></div>
 
-                <div class="row">
+                <div class="row shadow p-3 mb-3 bg-body rounded">
                     <div class="row">
                         <div class="col text-center">
                             <h5>OBSERVACIONES (si las hay)</h5>
@@ -404,12 +413,12 @@
                     <div class="row">
                         <div class="input-group">
                             <span class="input-group-text">Observaciones</span>
-                            <textarea class="form-control" aria-label="With textarea" rows="5"></textarea>
+                            <textarea class="form-control" id="observaciones" name="observaciones" aria-label="With textarea" rows="5"></textarea>
                           </div>
                     </div>
                 </div>
 
-                <button type="submit" class="btn btn-primary mt-4">Guardar Historia</button>
+                <button type="submit" id="saveHistory" class="btn btn-primary mt-4">Guardar Historia</button>
 
             </div>
 
@@ -423,6 +432,9 @@
 
         </form>
 
+        <!--Jquery-->
+        <script src="https://code.jquery.com/jquery-3.6.3.min.js"
+            integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
 
         <!--Bootstrap 5-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
@@ -431,5 +443,6 @@
 
         <!--Eps Json-->
         <script src="js/dataForm.js"></script>
+        
     </body>
 </html>

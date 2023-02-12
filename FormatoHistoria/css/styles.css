@@ -1,8 +1,30 @@
 :root {
-    --separator: #9925be;
+    --purple: #9925be;
 }
 .separator {
     width: 98.2%;
     height: 30px;
-    background-color: var(--separator);
+    background-color: var(--purple);
 }
+span.input-group-text {
+    background-color: var(--purple);
+    color: #FFFFFF;
+}
+
+.container button {
+    background-color: var(--purple);
+    border-color: var(--purple);
+}
+
+/*Media Queries*/
+@media (max-width:480px) {
+    .row {
+        flex-direction: column;
+    }
+}
+
+@media (min-width:481px) and (max-width:768px) {
+    .row {
+        flex-direction: column;
+    }
+} 

@@ -37,4 +37,15 @@ for(var key in eps) {
     html += "<option value" + eps[key] + ">" + eps[key] + "</option>"
 }
 
-document.getElementById("eps").innerHTML = html;
+document.getElementById("pacienteEps").innerHTML = html;
+
+
+$(document).ready(function () {
+    $('#historiaClinica').submit(function (e) { 
+        e.preventDefault();
+
+        let data = $(this).serializeArray();
+
+        console.log(data);
+     })
+})
